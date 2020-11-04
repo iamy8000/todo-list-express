@@ -1,17 +1,17 @@
 const moongoose = require('mongoose')
-const Schema = moongoose.Schema()
+const Schema = moongoose.Schema
 
 const userSchema = new Schema({
   name: {
-    type: string,
+    type: String,
     required: true
   },
   email: {
-    type: string,
+    type: String,
     required: true
   },
   password: {
-    type: string,
+    type: String,
     required: true
   },
   createAt: {
