@@ -1,0 +1,28 @@
+{{#if success_msg}} {{!-- 你已經成功登出 --}}
+<div class="alert alert-success alert-dismissible fade show" role="alert">
+  {{success_msg}}
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+{{/if}}
+
+{{#if warning_msg}} {{!-- 請先登入才能使用 --}}
+<div class="alert alert-warning alert-dismissible fade show" role="alert">
+  {{warning_msg}}
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+{{/if}}
+
+{{#if erros}} {{!-- 表單填寫有誤 --}}
+{{#each erros}}
+<div class="alert alert-danger alert-dismissible fade show" role="alert">
+  {{this.message}}
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+{{/each}}
+{{/if}}

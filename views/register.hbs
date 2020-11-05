@@ -2,32 +2,33 @@
   <div class="col-md-6 m-auto">
     <div class="card card-body">
       <h1 class="text-center mt-3">Register</h1>
+      {{> message}}
       <form action="/users/register" method="POST"> {{!-- //form要去哪裡 --}}
         <div class="form-group">
           <label for="name">Name</label>
           <input type="name" class="form-control" id="name" name="name" value="{{name}}" aria-describedby="nameHelp"
-            placeholder="Enter name" required>
+            placeholder="Enter name">
         </div>
         <div class="form-group">
           <label for="email">Email</label>
           <input type="email" class="form-control" id="email" name="email" value="{{email}}"
-            aria-describedby="emailHelp" placeholder="Enter email" required>
+            aria-describedby="emailHelp" placeholder="Enter email">
         </div>
         <div class="form-group">
           <label for="password">Password</label>
           <input type="password" class="form-control" id="password" name="password" value="{{password}}"
-            placeholder="Password" required>
+            placeholder="Password">
         </div>
         <div class="form-group">
           <label for="confirmPassword">Confirm Password</label>
           <input type="password" class="form-control" id="confirmPassword" name="confirmPassword"
-            value="{{confirmPassword}}" placeholder="confirm Password" required>
+            value="{{confirmPassword}}" placeholder="confirm Password">
         </div>
         <button type="submit" class="btn btn-primary btn-block">Register</button>
       </form>
       <p class="lead mt-4">
         Have An Account?<a href="/users/login">Login</a>
-        ç</p>
+      </p>
     </div>
   </div>
 </div>
