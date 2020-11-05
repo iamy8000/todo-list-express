@@ -24,6 +24,13 @@ app.use(methodOverride('_method'))
 
 usePassport(app)
 
+app.use((req, res, next) => {
+  //一登入狀態切換導覽列：登入或登出
+  res.locals.isAuthenticated = req.isAuthenticated()
+  res.locals.user = req.user
+  next()
+})
+
 app.use(routes)
 
 app.listen(PORT, () => {
